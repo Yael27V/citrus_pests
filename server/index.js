@@ -30,6 +30,14 @@ app.use((err, req, res, next) => {
   res.status(500).json({ error: 'Algo salió mal!' });
 });
 
+app.get("/", (req, res) => {
+  res.json({ message: "Backend funcionando correctamente" });
+});
+
+app.get("/api/test", (req, res) => {
+  res.json({ ok: true, message: "Conexión exitosa entre frontend y backend" });
+});
+
 app.listen(PORT, () => {
   console.log(`🚀 Server running on http://localhost:${PORT}`);
 });
