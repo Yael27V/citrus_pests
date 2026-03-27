@@ -1,4 +1,4 @@
-const API_BASE = 'https://citrus-pests.onrender.com';
+const API_BASE = import.meta.env.VITE_API_URL;
 
 // Fetch helper con manejo de errores
 async function fetchAPI(endpoint, options = {}) {
@@ -21,15 +21,15 @@ async function fetchAPI(endpoint, options = {}) {
 // ==================== RANCHOS ====================
 
 export async function getRanchos() {
-  return fetchAPI('/ranchos');
+  return fetchAPI('/api/ranchos');
 }
 
 export async function getRancho(id) {
-  return fetchAPI(`/ranchos/${id}`);
+  return fetchAPI(`/api/ranchos/${id}`);
 }
 
 export async function createRancho(data) {
-  return fetchAPI('/ranchos', {
+  return fetchAPI('/api/ranchos', {
     method: 'POST',
     body: JSON.stringify(data),
   });
@@ -39,15 +39,15 @@ export async function createRancho(data) {
 
 export async function getPlagas(ranchoId = null) {
   const query = ranchoId ? `?rancho_id=${ranchoId}` : '';
-  return fetchAPI(`/plagas${query}`);
+  return fetchAPI(`/api/plagas${query}`);
 }
 
 export async function getPlaga(id) {
-  return fetchAPI(`/plagas/${id}`);
+  return fetchAPI(`/api/plagas/${id}`);
 }
 
 export async function createPlaga(data) {
-  return fetchAPI('/plagas', {
+  return fetchAPI('/api/plagas', {
     method: 'POST',
     body: JSON.stringify(data),
   });
@@ -61,14 +61,14 @@ export async function uploadImagen(file, plagaId = null, tipo = 'campo') {
   if (plagaId) formData.append('plaga_id', plagaId);
   formData.append('tipo', tipo);
 
-  const response = await fetch(`${API_BASE}/upload/imagen`, {
+  const response = await fetch(`${API_BASE}/api/upload/imagen`, {
     method: 'POST',
     body: formData,
   });
 
   if (!response.ok) {
     const error = await response.json().catch(() => ({ error: 'Error al subir imagen' }));
-    throw new Error(error.error);
+    throw new Error(error.error || 'Error al subir imagen');
   }
 
   return response.json();
