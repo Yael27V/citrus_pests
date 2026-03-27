@@ -1,4 +1,4 @@
-const API_BASE = '/api';
+const API_BASE = 'https://citrus-pests.onrender.com';
 
 // Fetch helper con manejo de errores
 async function fetchAPI(endpoint, options = {}) {
