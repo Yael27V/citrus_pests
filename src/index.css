@@ -1,0 +1,52 @@
+@import "tailwindcss";
+
+/* Citrus Pests - Paleta de colores cítricos */
+:root {
+  /* Verdes Lima/Cítricos */
+  --citrus-50: #f7fee7;
+  --citrus-100: #ecfccb;
+  --citrus-200: #d9f99d;
+  --citrus-300: #bef264;
+  --citrus-400: #a3e635;
+  --citrus-500: #84cc16;
+  --citrus-600: #65a30d;
+  --citrus-700: #4d7c0f;
+  --citrus-800: #3f6212;
+  --citrus-900: #365314;
+  --citrus-950: #1a2e05;
+  
+  /* Accent - Naranja cítrico */
+  --accent-400: #fb923c;
+  --accent-500: #f97316;
+  --accent-600: #ea580c;
+}
+
+/* Smooth scrolling */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Custom selection color */
+::selection {
+  background-color: var(--citrus-200);
+  color: var(--citrus-900);
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #f1f5f9;
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--citrus-400);
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--citrus-500);
+}
