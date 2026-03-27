@@ -14,7 +14,6 @@ const PORT = process.env.PORT || 3001;
 app.use(cors({
   origin: 'https://citrus-pests.vercel.app/',
   methods: ['GET', 'POST', 'PUT', 'DELETE'],
-  credentials: false
 }));
 app.use(express.json());
 
