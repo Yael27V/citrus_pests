@@ -12,7 +12,7 @@ const PORT = process.env.PORT || 3001;
 
 // Middleware
 app.use(cors({
-  origin: 'https://citrus-pests.vercel.app/',
+  origin: 'https://citrus-pests.vercel.app',
   methods: ['GET', 'POST', 'PUT', 'DELETE'],
 }));
 app.use(express.json());
