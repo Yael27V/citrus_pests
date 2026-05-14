@@ -21,7 +21,6 @@ export default function Navbar() {
           
           <div className="flex items-center space-x-1">
             <NavLink to="/" active={location.pathname === '/'}>Inicio</NavLink>
-            <NavLink to="/ranchos" active={isActive('/ranchos')}>Ranchos</NavLink>
             <NavLink to="/plagas" active={isActive('/plagas')}>Plagas</NavLink>
           </div>
         </div>

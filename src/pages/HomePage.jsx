@@ -15,24 +15,15 @@ export default function HomePage() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col-reverse md:flex-row items-center gap-8 py-20 md:py-32">
           <div className="flex-1 min-w-0">
             <h1 className="text-4xl sm:text-5xl font-bold text-gray-900 mb-6 leading-tight">
-              Monitoreo profesional de plagas en <span className="text-lime-700">cultivos de limón</span>
+              Monitoreo profesional de plagas en <span className="text-lime-700">citricos</span>
             </h1>
             <p className="text-lg text-gray-600 mb-10 max-w-xl">
               Plataforma para la identificación, documentación y seguimiento de plagas en ranchos de lima, limón y otros cítricos.
             </p>
             <div className="flex flex-col sm:flex-row gap-4">
-              <Link 
-                to="/ranchos"
-                className="inline-flex items-center justify-center px-6 py-3 bg-lime-600 text-white font-medium rounded-lg hover:bg-lime-700 transition-colors"
-              >
-                Ver Ranchos
-                <svg className="ml-2 w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
-                </svg>
-              </Link>
-              <Link 
+              <Link
                 to="/plagas"
-                className="inline-flex items-center justify-center px-6 py-3 bg-white text-lime-700 font-medium border border-lime-200 rounded-lg hover:bg-lime-50 hover:border-lime-400 transition-colors"
+                className="inline-flex items-center justify-center px-6 py-3 bg-lime-600 text-white font-medium rounded-lg hover:bg-lime-700 transition-colors"
               >
                 Catálogo de Plagas
               </Link>
