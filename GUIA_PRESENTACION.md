@@ -110,7 +110,7 @@ PostgreSQL (Supabase) + Storage
 | Backend | Express.js | API REST escalable |
 | BD | PostgreSQL | Relaciones complejas |
 | Cloud | Supabase | Backend-as-a-Service |
-| Hosting | Render | Despliegue automatizado |
+| Hosting | Vercel | Edge Network, despliegue instantáneo |
 
 **Diapositiva 3.2: Diagrama de Arquitectura**
 ```
@@ -315,7 +315,7 @@ Contacto:
 2. **Escalabilidad**: Diseño que permite crecer sin refactoring mayor
 3. **Mantenibilidad**: Código limpio, componentes reutilizables
 4. **Testing**: Validación en múltiples navegadores y dispositivos
-5. **DevOps**: CI/CD con GitHub + Render, despliegue automático
+5. **DevOps**: CI/CD con GitHub + Vercel, despliegue automático instantáneo
 
 ### Para Sinodales de Agrónomos/Agricultura
 1. **Problema Real**: Las plagas causan pérdidas del 30-40% en cosechas
@@ -361,11 +361,11 @@ Respuesta:
 ### "¿Qué pasa si se cae el servidor?"
 ```
 Respuesta:
-1. Render tiene uptime 99.9%
-2. Backups automáticos de BD cada 24h
-3. Logs y alertas configuradas
+1. Vercel tiene uptime 99.9% con Edge Network global
+2. Supabase backups automáticos de BD cada 24h
+3. Logs y alertas en Vercel y Supabase
 4. Plan de recuperación de desastres documentado
-5. Redundancia en cloud: fácilmente escalable
+5. Infraestructura serverless: escalable automáticamente
 ```
 
 ### "¿Cuál es el modelo de negocio?"

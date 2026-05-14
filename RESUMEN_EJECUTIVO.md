@@ -47,7 +47,7 @@ PostgreSQL (Supabase)
 | Tiempo de desarrollo | 8-10 semanas |
 | Responsividad | 100% (móvil + desktop) |
 | Tiempo de carga | < 3 segundos |
-| Disponibilidad | 99.9% (Render SLA) |
+| Disponibilidad | 99.9% (Vercel SLA) |
 
 ---
 
@@ -86,7 +86,7 @@ PostgreSQL (Supabase)
 | Backend | Express.js | Framework Node.js estándar |
 | BD | PostgreSQL | Relaciones complejas, ACID |
 | Cloud BD | Supabase | Backend-as-a-Service, sin config |
-| Hosting | Render | Despliegue automático desde Git |
+| Hosting | Vercel | Edge Network, despliegue instantáneo |
 | Control | GitHub | Versionamiento y colaboración |
 
 ---
@@ -292,18 +292,18 @@ created_at, updated_at
 ## 🌐 Despliegue
 
 ### Frontend
-- **Plataforma**: Render
-- **URL**: https://citruspeststacking.com
+- **Plataforma**: Vercel (Edge Network)
+- **URL**: https://citrus-pests.vercel.app
 - **Branch**: main (automático)
 - **Build**: `npm run build`
-- **Hosting**: Static site
+- **Output**: dist (optimizado automáticamente)
 
 ### Backend
-- **Plataforma**: Render
-- **URL**: https://api.citruspeststacking.com
-- **Branch**: main (automático)
-- **Start**: `npm run dev` (server/)
-- **Tipo**: Web service
+- **Tipo**: Serverless con Supabase
+- **Base de Datos**: Supabase PostgreSQL
+- **Autenticación**: Supabase Auth
+- **Storage**: Supabase Storage (imágenes)
+- **Ventaja**: Sin servidor backend que mantener
 
 ### Base de Datos
 - **Plataforma**: Supabase (PostgreSQL)

@@ -816,12 +816,12 @@ BUILD
 
 DEPLOY
 ☑ Push a main branch
-☑ Trigger en Render (automático)
+☑ Trigger en Vercel (automático al hacer push)
 ☑ Verificar health check: curl https://api.domain.com/health
 ☑ Pruebas en producción
 
 POST-DEPLOY
-☑ Verificar logs en Render
+☑ Verificar logs en Vercel Dashboard
 ☑ Probar flujos críticos
 ☑ Configurar alertas de error
 ```

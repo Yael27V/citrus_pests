@@ -334,8 +334,7 @@
             <h3>Estado Actual</h3>
             <div class="highlight">
                 <strong>✅ Sistema en Producción</strong><br>
-                Demo en vivo: <strong>https://citruspeststacking.com</strong><br>
-                API: <strong>https://api.citruspeststacking.com</strong>
+                Demo en vivo: <strong>https://citrus-pests.vercel.app</strong><br>
             </div>
         </div>
 
@@ -1023,15 +1022,13 @@ GitHub Repository
     (Git Push)
         ↓
 ┌───────────────────────────────┐
-│    RENDER.COM (Hosting)       │
+│    VERCEL (Hosting)           │
 ├───────────────────────────────┤
-│ Frontend  │   Backend         │
-│ (React)   │   (Express)       │
-│ Puerto:   │   Puerto:         │
-│ 5173 →    │   3001 →          │
-│ 80/443    │   3001            │
+│ Frontend (React)              │
+│ Despliegue automático         │
+│ Edge Network Global           │
 └────────┬──────────────────────┘
-         │ SQL Queries
+         │ HTTP REST API
 ┌────────▼──────────────────────┐
 │  SUPABASE (Cloud Database)    │
 │  PostgreSQL + Storage         │
@@ -1040,7 +1037,7 @@ GitHub Repository
             </div>
 
             <h3>Frontend Deployment</h3>
-            <h4>Plataforma: Render (Web App Estático)</h4>
+            <h4>Plataforma: Vercel (Edge Network)</h4>
             <table>
                 <tr>
                     <th>Elemento</th>
@@ -1048,19 +1045,19 @@ GitHub Repository
                 </tr>
                 <tr>
                     <td>URL Producción</td>
-                    <td>https://citruspeststacking.com</td>
+                    <td>https://citrus-pests.vercel.app</td>
                 </tr>
                 <tr>
                     <td>Build Command</td>
                     <td><code>npm run build</code></td>
                 </tr>
                 <tr>
-                    <td>Publish Directory</td>
+                    <td>Output Directory</td>
                     <td><code>dist</code></td>
                 </tr>
                 <tr>
-                    <td>Environment</td>
-                    <td>VITE_API_BASE=https://api.citruspeststacking.com</td>
+                    <td>Plataforma</td>
+                    <td>Vercel Edge Network</td>
                 </tr>
                 <tr>
                     <td>Uptime</td>
@@ -1068,32 +1065,28 @@ GitHub Repository
                 </tr>
             </table>
 
-            <h3>Backend Deployment</h3>
-            <h4>Plataforma: Render (Web Service)</h4>
+            <h3>Backend / API (Serverless)</h3>
+            <h4>Servicios Utilizados</h4>
             <table>
                 <tr>
-                    <th>Elemento</th>
-                    <th>Configuración</th>
+                    <th>Componente</th>
+                    <th>Servicio</th>
                 </tr>
                 <tr>
-                    <td>URL Producción</td>
-                    <td>https://api.citruspeststacking.com</td>
+                    <td>Base de Datos</td>
+                    <td>Supabase PostgreSQL</td>
                 </tr>
                 <tr>
-                    <td>Start Command</td>
-                    <td><code>cd server && npm start</code></td>
+                    <td>Autenticación</td>
+                    <td>Supabase Auth</td>
                 </tr>
                 <tr>
-                    <td>Port</td>
-                    <td>3001</td>
+                    <td>Storage de Imágenes</td>
+                    <td>Supabase Storage</td>
                 </tr>
                 <tr>
-                    <td>Environment</td>
-                    <td>SUPABASE_URL, SUPABASE_KEY, PORT</td>
-                </tr>
-                <tr>
-                    <td>Uptime</td>
-                    <td>99.9% SLA</td>
+                    <td>API Calls</td>
+                    <td>Directo a Supabase desde Frontend</td>
                 </tr>
             </table>
 
@@ -1111,19 +1104,19 @@ GitHub Repository
             <pre>
 1. Developer hace Push a GitHub
         ↓
-2. Render detecta cambios en main branch
+2. Vercel detecta cambios en main branch
         ↓
-3. Render ejecuta Build Command
+3. Vercel ejecuta Build Command (npm run build)
         ↓
-4. Tests y Lint validación
+4. Build en Edge Network de Vercel
         ↓
-5. Compilación: npm run build
+5. Compilación: React + Vite + Tailwind
         ↓
 6. Deploy automático si todo OK
         ↓
-7. DNS apunta a nuevo deployment
+7. Archivos servidos desde CDN global
         ↓
-8. Usuarios ven cambios en vivo
+8. Usuarios ven cambios en vivo (en segundos)
             </pre>
 
             <h3>Métricas de Performance</h3>
@@ -1299,18 +1292,18 @@ GitHub Repository
                 </tr>
                 <tr>
                     <td>Demo en Vivo</td>
-                    <td>https://citruspeststacking.com</td>
-                    <td>Aplicación funcionando en producción</td>
-                </tr>
-                <tr>
-                    <td>API Backend</td>
-                    <td>https://api.citruspeststacking.com</td>
-                    <td>Endpoints REST disponibles</td>
+                    <td>https://citrus-pests.vercel.app</td>
+                    <td>Aplicación funcionando en Vercel</td>
                 </tr>
                 <tr>
                     <td>Código Fuente</td>
                     <td>https://github.com/Yael27V/citrus_pests</td>
                     <td>Repositorio completo en GitHub</td>
+                </tr>
+                <tr>
+                    <td>Base de Datos</td>
+                    <td>Supabase PostgreSQL</td>
+                    <td>Cloud database con almacenamiento</td>
                 </tr>
             </table>
 

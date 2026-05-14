@@ -72,7 +72,7 @@ Se utilizó una metodología ágil con ciclos iterativos cortos, permitiendo:
 
 #### **Fase 5: Despliegue y Mantenimiento**
 - Configuración de servidores de producción
-- Despliegue en plataformas cloud (Render)
+- Despliegue en Vercel (Edge Network global)
 - Monitoreo y mantenimiento continuo
 - Documentación para soporte técnico
 
